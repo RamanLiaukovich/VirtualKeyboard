@@ -6,7 +6,7 @@ body {
     position: relative;
     width: 70%;
     max-width: 900px;
-    height: calc(100wh-300px);
+    height: 300px;
     margin: 20px auto;
 }
 
@@ -54,6 +54,11 @@ body {
 
 .key:active {
     background-color: yellow;
+}
+
+.active {
+    background-color: yellow;
+    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 /* .key__activatable::after {
