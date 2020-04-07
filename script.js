@@ -81,12 +81,15 @@ const keyboard = {
                 case 'shift ↑':
                     keyElement.classList.add('key__wide');
                     keyElement.textContent = key.toLocaleLowerCase();
-             
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '';
                             this.triggerEvent('oninput');    
                             event.key = Shift;
+                            keyElement.classList.add('active');
                         });
 
 
@@ -96,10 +99,13 @@ const keyboard = {
                 case '↑ shift':
                         keyElement.classList.add('key__wide');
                         keyElement.textContent = key.toLocaleLowerCase();    
-                
+                        document.querySelectorAll('.key').forEach(function(element) {
+                            element.classList.remove('active');
+                        })
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '';
-                            this.triggerEvent('oninput');    
+                            this.triggerEvent('oninput');  
+                            keyElement.classList.add('active');  
                         });
                 
                         break; 
@@ -107,11 +113,14 @@ const keyboard = {
                 case 'keyboard_arrow_right':
                     keyElement.classList.add('key');
                     keyElement.innerHTML = createIcon('keyboard_arrow_right');
-                
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '→';
-                            this.triggerEvent('oninput');    
+                            this.triggerEvent('oninput'); 
+                            keyElement.classList.add('active');    
                         });
                 
                         break; 
@@ -119,11 +128,14 @@ const keyboard = {
                 case 'keyboard_arrow_down':
                     keyElement.classList.add('key');
                     keyElement.innerHTML = createIcon('keyboard_arrow_down');
-                
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '↓';
-                            this.triggerEvent('oninput');    
+                            this.triggerEvent('oninput');  
+                            keyElement.classList.add('active');   
                         });
                 
                         break; 
@@ -131,11 +143,14 @@ const keyboard = {
                 case 'keyboard_arrow_left':
                     keyElement.classList.add('key');
                     keyElement.innerHTML = createIcon('keyboard_arrow_left');
-                
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '←';
                             this.triggerEvent('oninput');    
+                            keyElement.classList.add('active'); 
                         });
                 
                         break; 
@@ -143,11 +158,14 @@ const keyboard = {
                 case 'keyboard_arrow_up':
                     keyElement.classList.add('key');
                     keyElement.innerHTML = createIcon('keyboard_arrow_up');
-                
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '↑';
                             this.triggerEvent('oninput');    
+                            keyElement.classList.add('active'); 
                         });
                 
                         break; 
@@ -155,11 +173,14 @@ const keyboard = {
                 case 'keyboard_arrow_up':
                     keyElement.classList.add('key');
                     keyElement.innerHTML = createIcon('keyboard_arrow_up');
-                
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '↑';
-                            this.triggerEvent('oninput');    
+                            this.triggerEvent('oninput');   
+                            keyElement.classList.add('active');  
                         });
                 
                         break; 
@@ -167,11 +188,14 @@ const keyboard = {
                 case 'backspace':
                     keyElement.classList.add('key__wide');
                     keyElement.innerHTML = createIcon('backspace');
-
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
 
                     keyElement.addEventListener('click', () => {
                         this.properties.value = this.properties.value.substring(0, this.properties.value.length - 1);
                         this.triggerEvent('oninput');
+                        keyElement.classList.add('active'); 
                     });
 
                     break;
@@ -179,11 +203,14 @@ const keyboard = {
                 case 'keyboard_tab':
                     keyElement.classList.add('key__wide');
                     keyElement.innerHTML = createIcon('keyboard_tab');
-                
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
                 
                         keyElement.addEventListener('click', () => {
                             this.properties.value += '    ';
-                            this.triggerEvent('oninput');    
+                            this.triggerEvent('oninput'); 
+                            keyElement.classList.add('active');    
                         });
                 
                         break; 
@@ -191,10 +218,13 @@ const keyboard = {
                 case 'keyboard_capslock':
                     keyElement.classList.add('key__wide');
                     keyElement.innerHTML = createIcon('keyboard_capslock');
-    
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
     
                     keyElement.addEventListener('click', () => {
                         this.toggleCapsLock();
+                        keyElement.classList.add('active'); 
 
                     });
 
@@ -217,7 +247,9 @@ const keyboard = {
                 case 'keyboard_return':
                     keyElement.classList.add('key__wide');
                     keyElement.innerHTML = createIcon('keyboard_return');
-        
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
         
                     keyElement.addEventListener('click', () => {
                         this.properties.value += '\n';
@@ -229,11 +261,14 @@ const keyboard = {
                 case 'space_bar':
                     keyElement.classList.add('key__extra-wide');
                     keyElement.innerHTML = createIcon('space_bar');
-            
+                    document.querySelectorAll('.key').forEach(function(element) {
+                        element.classList.remove('active');
+                    })
             
                     keyElement.addEventListener('click', () => {
                         this.properties.value += ' ';
-                        this.triggerEvent('oninput');    
+                        this.triggerEvent('oninput');
+                        keyElement.classList.add('active');     
                     });
             
                     break; 
@@ -242,10 +277,14 @@ const keyboard = {
                     keyElement.textContent = key.toLocaleLowerCase();             
                 
                         keyElement.addEventListener('click', () => {
+                            document.querySelectorAll('.key').forEach(function(element) {
+                                element.classList.remove('active');
+                            })
                             // this.properties.value = this.properties.capsLock ? key.toUpperCase() : key.toLowerCase();
                             this.properties.value += keyElement.textContent;
                             this.triggerEvent('oninput');  
                             console.log(keyElement.textContent);
+                            keyElement.classList.add('active'); 
                             
                         });
                 
