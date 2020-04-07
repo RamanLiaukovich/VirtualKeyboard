@@ -15,7 +15,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: blue;
+    background-color: #B22222;
     user-select: none;
     height: fit-content;
 }
@@ -32,7 +32,7 @@ body {
     max-width: 60px;
     margin: 3px;
     border: none;
-    background-color: blueviolet;
+    background-color: #8B0000;
     color: white;
     border-radius: 5px;
     outline: none;
@@ -53,12 +53,12 @@ body {
 }
 
 .key:active {
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .active {
-    background-color: yellow;
-    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    background-color: #FF0000;
+    transform: scale(1.2);
 }
 
 /* .key__activatable::after {
